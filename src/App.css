@@ -17,6 +17,7 @@
 body {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
+  font-size: 16px;
   color: var(--text-primary);
 }
 
@@ -156,5 +157,131 @@ li {
   nav {
     margin: 0 165px;
     padding: 45px 0;
+  }
+}
+
+/* PRODUCT SECTION */
+.text-section-container {
+  padding: 25px;
+}
+
+.product-subtitle {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: bold;
+  letter-spacing: 1.85px;
+  margin-bottom: 16px;
+}
+
+.product-title {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+
+.product-description {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.price-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.price-left p:first-child {
+  font-size: 28px;
+}
+
+.price-left P:last-child {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.price-container > p {
+  color: var(--text-tertiary);
+  text-decoration: line-through;
+}
+
+.cart-counter-container {
+
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-tertiary);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 15px;
+}
+
+.counter-icon {
+  align-self: center;
+}
+
+.counter {
+  font-weight: bold;
+}
+
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0px 20px 50px -20px var(--color-primary);
+}
+
+.add-to-cart > p {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  .product-container {
+    display: flex;
+  }
+  .price-container {
+    display: block;
+  }
+  .price-left {
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .cart-counter-container {
+    display: flex;
+    gap: 16px;
+  }
+  .counter-container {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .add-to-cart {
+    flex: 2;
+    align-self: center;
+    box-shadow: none;
+  }
+  .add-to-cart .cart-icon {
+    /* width: 17px; */
+    /* height: auto; */
+    /* align-self: center; */
   }
 }
