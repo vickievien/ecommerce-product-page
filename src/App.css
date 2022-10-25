@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+/* GLOBAL STYLES */
+:root {
+  --text-primary: #1D2026;
+  --text-secondary: #69707D;
+  --text-tertiary: #B6BCC8;
+  --color-primary: #FF7E1B;
+  --color-secondary: #FFEEE2;
+  --color-tertiary: #F6F8FD;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  color: var(--text-primary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+/* NAV SECTION */
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-left {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-main-list {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-logo-link {
+  order: 2;
+}
+
+.nav-menu-container {
+  order: 1;
+}
+
+.nav-menu-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-main-list {
+  display: none;
+}
+
+.nav-side-list {
+  display: flex;
+  gap: 20px;
+  order: 3;
+
+}
+
+.avatar-link {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.avatar-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-left {
+    gap: 55px;
   }
-  to {
-    transform: rotate(360deg);
+  .nav-logo-link {
+    order: 1;
+  }
+  .nav-menu-container {
+    display: none;
+  }
+  .nav-main-list {
+    display: flex;
+    gap: 32px;
+    order: 2;
+  }
+  .nav-main-list > li > a {
+    color: var(--text-secondary);
+  }
+  .nav-side-list {
+    order: 3;
   }
 }
