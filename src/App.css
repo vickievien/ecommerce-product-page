@@ -72,14 +72,13 @@ li {
   display: none;
 }
 
-.nav-side-list {
+.nav-right-list {
   display: flex;
   gap: 20px;
   order: 3;
-
 }
 
-.nav-side-list:first-of-type {
+.nav-right-list:first-of-type {
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -120,10 +119,10 @@ li {
   .nav-main-list > li > a {
     color: var(--text-secondary);
   }
-  .nav-side-list {
+  .nav-right-list {
     order: 3;
   }
-  .nav-side-list:first-of-type {
+  .nav-right-list:first-of-type {
     align-items: center;
   }
   .avatar-link {

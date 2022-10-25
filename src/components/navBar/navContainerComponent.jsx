@@ -28,7 +28,7 @@ const NavContainerComponent = () => {
                     </li>
                 </ul>
             </div>
-            <ul className="nav-side-list">
+            <ul className="nav-right-list">
                 <li>
                     <a href="#" className="cart-link">
                         <img src="/images/icon-cart.svg" alt="cart" />
