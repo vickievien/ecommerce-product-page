@@ -3,12 +3,12 @@ import NavMainListComponent from "./navMainListComponent";
 import NavMenuComponent from "./navMenuComponent";
 
 
-const NavLeftContainerComponent = () => {
+const NavLeftContainerComponent = (props) => {
 
     return (
         <div className="nav-left">        
             <NavLogoComponent />
-            <NavMenuComponent />
+            <NavMenuComponent toggleMobileNav={props.toggleMobileNav}/>
             <NavMainListComponent />
         </div>
     )

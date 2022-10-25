@@ -95,6 +95,27 @@ li {
   object-fit: cover;
 }
 
+/* MOBILE NAV */
+.mobile-nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 100vh;
+  background-color: var(--color-secondary);
+  padding: 25px;
+}
+
+.nav-close-icon {
+  margin-bottom: 55px;
+}
+
+.mobile-nav-list-container li {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 @media only screen and (min-width: 768px) {
   nav {
     margin: 0 60px;
