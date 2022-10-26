@@ -8,15 +8,24 @@ const CarouselContainerComponent = () => {
     let [index, setIndex] = useState(0);
     console.log(images[0]);
 
+    const numOfImages = images.length - 1;
+
+    const nextSlide = () => {
+        setIndex(index === numOfImages ? 0 : index + 1)
+    }
+
+    const prevSlide = () => {
+        setIndex(index > 0 ? index - 1 : numOfImages)
+    }
 
     return (
         <section className="carousel-container">
             <img className="carousel-image" src={`./images/${images[index]}`} alt="image-product" />
             <div className="arrows-container">
-                <div className="arrow-wrapper">
+                <div className="arrow-wrapper" onClick={prevSlide}>
                     <img className="arrow" src="./images/icon-previous.svg" alt="previous arrow" />
                 </div>
-                <div className="arrow-wrapper">
+                <div className="arrow-wrapper" onClick={nextSlide}>
                     <img className="arrow" src="./images/icon-next.svg" alt="next arrow" />
                 </div>
             </div>
