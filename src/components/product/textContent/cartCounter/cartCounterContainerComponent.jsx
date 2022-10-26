@@ -5,7 +5,7 @@ const CartCounterContainerComponent = (props) => {
 
     return (
         <section className="cart-counter-container">
-            <CounterContainerComponent addItemToCart={props.addItemToCart} deleteItemToCart={props.deleteItemToCart}  numItemInCart={props.numItemInCart}/>
+            <CounterContainerComponent addItemToCart={props.addItemToCart} deleteItemToCart={props.deleteItemToCart}  counter={props.counter}/>
             <AddToCartButtonComponent addToCartButton={props.addToCartButton}/>
         </section>
     )

@@ -5,35 +5,35 @@ import ProductContainerComponent from './components/product/productContainerComp
 import { useState } from 'react';
 
 function App() {
-  const [numItemInCart, setNumItemInCart] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [navCartNum, setNavCartNum] = useState(0);
   const [navCart, setNavCart] = useState(false);
 
   const addItemToCart = () => {
-    let newNumItemInCart = numItemInCart + 1;
-    setNumItemInCart(newNumItemInCart);
+    let newCounter = counter + 1;
+    setCounter(newCounter);
   }
 
   const deleteItemToCart = () => {
-    let newNumItemInCart = numItemInCart - 1;
-    setNumItemInCart(newNumItemInCart);
+    let newCounter = counter - 1;
+    setCounter(newCounter);
   }
 
   const addToCartButton = () => {
-    if(numItemInCart > 0) {
+    if(counter > 0) {
       setNavCart(true);
-      setNavCartNum(numItemInCart);
-    }else if(numItemInCart === 0) {
+      setNavCartNum(counter);
+    }else if(counter === 0) {
       setNavCart(false)
-      setNavCartNum(numItemInCart);
+      setNavCartNum(counter);
     }
   }
 
 
   return (
     <div className="App">
-      <NavContainerComponent numItemInCart={numItemInCart} navCart={navCart} navCartNum={navCartNum}/>
-      <ProductContainerComponent addItemToCart={addItemToCart} deleteItemToCart={deleteItemToCart} numItemInCart={numItemInCart} addToCartButton={addToCartButton}/>
+      <NavContainerComponent counter={counter} navCart={navCart} navCartNum={navCartNum}/>
+      <ProductContainerComponent addItemToCart={addItemToCart} deleteItemToCart={deleteItemToCart} counter={counter} addToCartButton={addToCartButton}/>
     </div>
   );
 }

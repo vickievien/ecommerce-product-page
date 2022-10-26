@@ -15,7 +15,7 @@ const NavContainerComponent = (props) => {
     return (
         <nav>
             <NavLeftContainerComponent toggleMobileNav={toggleMobileNav}/>
-            <NavRightContainerComponent numItemInCart={props.numItemInCart} navCart={props.navCart} navCartNum={props.navCartNum}/>
+            <NavRightContainerComponent navCart={props.navCart} navCartNum={props.navCartNum}/>
             {mobileNav ? <MobileNavContainerComponent toggleMobileNav={toggleMobileNav}/> : ""}
         </nav>
     )
