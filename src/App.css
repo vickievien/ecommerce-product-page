@@ -85,6 +85,30 @@ li {
   justify-content: center;
 }
 
+.cart-link {
+  position: relative;
+}
+
+.nav-cart-num {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  border-radius: 7px;
+  background-color: var(--color-primary);
+  top: -5px;
+  right: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-cart-num > p {
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  font-size: 10px;
+}
+
 .avatar-link {
   width: 24px;
   height: 24px;
