@@ -13,8 +13,12 @@ const CarouselContainerComponent = () => {
         <section className="carousel-container">
             <img className="carousel-image" src={`./images/${images[index]}`} alt="image-product" />
             <div className="arrows-container">
-                <img className="arrow" src="./images/icon-previous.svg" alt="previous arrow" />
-                <img className="arrow" src="./images/icon-next.svg" alt="next arrow" />
+                <div className="arrow-wrapper">
+                    <img className="arrow" src="./images/icon-previous.svg" alt="previous arrow" />
+                </div>
+                <div className="arrow-wrapper">
+                    <img className="arrow" src="./images/icon-next.svg" alt="next arrow" />
+                </div>
             </div>
         </section>
     )
