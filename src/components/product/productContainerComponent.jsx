@@ -1,12 +1,12 @@
 import CarouselContainerComponent from "./carousel/carouselContainerComponent";
 import TextContentContainerComponent from "./textContent/textContentContainer";
 
-const ProductContainerComponent = () => {
+const ProductContainerComponent = (props) => {
 
     return (
         <section className="product-container">
             <CarouselContainerComponent />
-            <TextContentContainerComponent />
+            <TextContentContainerComponent  addItemToCart={props.addItemToCart} deleteItemToCart={props.deleteItemToCart} numItemInCart={props.numItemInCart}/>
         </section>
     )
 }

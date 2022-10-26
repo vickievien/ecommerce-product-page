@@ -1,12 +1,12 @@
 import AddToCartButtonComponent from "./addToCartButtonComponent";
 import CounterContainerComponent from "./counterContainerComponent";
 
-const CartCounterContainerComponent = () => {
+const CartCounterContainerComponent = (props) => {
 
     return (
         <section className="cart-counter-container">
-            <CounterContainerComponent />
-            <AddToCartButtonComponent />
+            <CounterContainerComponent addItemToCart={props.addItemToCart} deleteItemToCart={props.deleteItemToCart}  numItemInCart={props.numItemInCart}/>
+            <AddToCartButtonComponent  />
         </section>
     )
 }
