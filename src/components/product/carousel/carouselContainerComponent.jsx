@@ -6,7 +6,6 @@ const CarouselContainerComponent = () => {
     const imageThumbnails = array.map(x => `image-product-${x}-thumbnail.jpg`);
 
     let [index, setIndex] = useState(0);
-    console.log(images[0]);
 
     const numOfImages = images.length - 1;
 
