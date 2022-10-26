@@ -3,6 +3,7 @@ import './App.css';
 import NavContainerComponent from './components/navBar/navContainerComponent';
 import ProductContainerComponent from './components/product/productContainerComponent';
 import { useState } from 'react';
+import CartModalComponent from './components/cartModal/cartModalComponent';
 
 function App() {
   const [counter, setCounter] = useState(1);
@@ -48,6 +49,10 @@ function App() {
     <div className="App">
       <NavContainerComponent counter={counter} navCart={navCart} navCartNum={navCartNum} toggleCartModal={toggleCartModal}/>
       <ProductContainerComponent addItemToCart={addItemToCart} deleteItemToCart={deleteItemToCart} counter={counter} addToCartButton={addToCartButton} productPrice={productPrice} discount={discount} discountedPrice={discountedPrice} />
+      {cartModal ?
+      <CartModalComponent />
+      :
+      ""}
     </div>
   );
 }
