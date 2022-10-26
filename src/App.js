@@ -5,7 +5,7 @@ import ProductContainerComponent from './components/product/productContainerComp
 import { useState } from 'react';
 
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
   const [navCartNum, setNavCartNum] = useState(0);
   const [navCart, setNavCart] = useState(false);
 
@@ -20,12 +20,14 @@ function App() {
   }
 
   const addToCartButton = () => {
-    if(counter > 0) {
+    let newNum = navCartNum + counter;
+    setNavCartNum(newNum);
+    setCounter(1)
+
+    if(newNum > 0) {
       setNavCart(true);
-      setNavCartNum(counter);
-    }else if(counter === 0) {
+    }else if(newNum === 0) {
       setNavCart(false)
-      setNavCartNum(counter);
     }
   }
 
