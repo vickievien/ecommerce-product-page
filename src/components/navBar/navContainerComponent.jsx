@@ -4,7 +4,7 @@ import MobileNavContainerComponent from "./mobileNav/mobileNavContainerComponent
 import NavLeftContainerComponent from "./navLeft/navLeftContainerComponent";
 import NavRightContainerComponent from "./navRight/navRightContainerComponent";
 
-const NavContainerComponent = () => {
+const NavContainerComponent = (props) => {
     const [mobileNav, setMobileNav] = useState(false);
 
     const toggleMobileNav = () => {
@@ -15,7 +15,7 @@ const NavContainerComponent = () => {
     return (
         <nav>
             <NavLeftContainerComponent toggleMobileNav={toggleMobileNav}/>
-            <NavRightContainerComponent />
+            <NavRightContainerComponent numItemInCart={props.numItemInCart} navCart={props.navCart} navCartNum={props.navCartNum}/>
             {mobileNav ? <MobileNavContainerComponent toggleMobileNav={toggleMobileNav}/> : ""}
         </nav>
     )

@@ -1,9 +1,15 @@
-const NavRightContainerComponent = () => {
+const NavRightContainerComponent = (props) => {
 
     return (
         <ul className="nav-right-list">
             <li>
                 <a href="#" className="cart-link">
+                    {props.navCart ? 
+                        <div className="nav-cart-num">
+                            <p>{props.navCartNum}</p>
+                        </div>
+                    : ""
+                    }
                     <img src="/images/icon-cart.svg" alt="cart" />
                 </a>
             </li>

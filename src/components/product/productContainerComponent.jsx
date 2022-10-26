@@ -6,7 +6,7 @@ const ProductContainerComponent = (props) => {
     return (
         <section className="product-container">
             <CarouselContainerComponent />
-            <TextContentContainerComponent  addItemToCart={props.addItemToCart} deleteItemToCart={props.deleteItemToCart} numItemInCart={props.numItemInCart}/>
+            <TextContentContainerComponent  addItemToCart={props.addItemToCart} deleteItemToCart={props.deleteItemToCart} numItemInCart={props.numItemInCart} addToCartButton={props.addToCartButton}/>
         </section>
     )
 }

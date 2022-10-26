@@ -9,7 +9,7 @@ const TextContentContainerComponent = (props) => {
             <h2 className="product-title">Fall Limited Edition Sneakers</h2>
             <p className="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
             <PriceContainerComponent />
-            <CartCounterContainerComponent  addItemToCart={props.addItemToCart} deleteItemToCart={props.deleteItemToCart} numItemInCart={props.numItemInCart}/>
+            <CartCounterContainerComponent  addItemToCart={props.addItemToCart} deleteItemToCart={props.deleteItemToCart} numItemInCart={props.numItemInCart} addToCartButton={props.addToCartButton}/>
         </section>
     )
 }

@@ -6,6 +6,8 @@ import { useState } from 'react';
 
 function App() {
   const [numItemInCart, setNumItemInCart] = useState(0);
+  const [navCartNum, setNavCartNum] = useState(0);
+  const [navCart, setNavCart] = useState(false);
 
   const addItemToCart = () => {
     let newNumItemInCart = numItemInCart + 1;
@@ -17,11 +19,21 @@ function App() {
     setNumItemInCart(newNumItemInCart);
   }
 
+  const addToCartButton = () => {
+    if(numItemInCart > 0) {
+      setNavCart(true);
+      setNavCartNum(numItemInCart);
+    }else if(numItemInCart === 0) {
+      setNavCart(false)
+      setNavCartNum(numItemInCart);
+    }
+  }
+
 
   return (
     <div className="App">
-      <NavContainerComponent />
-      <ProductContainerComponent addItemToCart={addItemToCart} deleteItemToCart={deleteItemToCart} numItemInCart={numItemInCart}/>
+      <NavContainerComponent numItemInCart={numItemInCart} navCart={navCart} navCartNum={navCartNum}/>
+      <ProductContainerComponent addItemToCart={addItemToCart} deleteItemToCart={deleteItemToCart} numItemInCart={numItemInCart} addToCartButton={addToCartButton}/>
     </div>
   );
 }
