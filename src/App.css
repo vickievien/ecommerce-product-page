@@ -348,3 +348,9 @@ li {
 .arrow {
   position: relative;
 }
+
+@media only screen and (min-width: 500px) {
+  .carousel-container {
+    height: 500px;
+  }
+}

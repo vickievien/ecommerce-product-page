@@ -2,7 +2,7 @@ const NavRightContainerComponent = (props) => {
 
     return (
         <ul className="nav-right-list">
-            <li>
+            <li onClick={props.toggleCartModal}>
                 <a href="#" className="cart-link">
                     {props.navCart ? 
                         <div className="nav-cart-num">

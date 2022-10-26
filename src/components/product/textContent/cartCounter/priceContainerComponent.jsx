@@ -1,12 +1,12 @@
-const PriceContainerComponent = () => {
-
+const PriceContainerComponent = (props) => {
+    
     return (
         <section className="price-container">
             <div className="price-left">
-                <p>$125.00</p>
-                <p>50%</p>
+                <p>${(props.discountedPrice).toFixed(2)}</p>
+                <p>{(props.discount*100)}%</p>
             </div>
-            <p>$250.00</p>
+            <p>${(props.productPrice).toFixed(2)}</p>
         </section>
     )
 }

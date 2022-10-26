@@ -8,6 +8,11 @@ function App() {
   const [counter, setCounter] = useState(1);
   const [navCartNum, setNavCartNum] = useState(0);
   const [navCart, setNavCart] = useState(false);
+  const [productPrice, setProductPrice] = useState(250);
+  const [discount, setDiscount] = useState(0.5);
+  const [discountedPrice, setDiscountedPrice] = useState(productPrice * discount);
+  const [cartTotal, setCartTotal] = useState(0);
+  const [cartModal, setCartModal] = useState(false);
 
   const addItemToCart = () => {
     let newCounter = counter + 1;
@@ -29,13 +34,20 @@ function App() {
     }else if(newNum === 0) {
       setNavCart(false)
     }
+
+    setCartTotal(newNum * discountedPrice);
+  }
+
+  const toggleCartModal = () => {
+    setCartModal(!cartModal);
+    console.log(cartTotal);
   }
 
 
   return (
     <div className="App">
-      <NavContainerComponent counter={counter} navCart={navCart} navCartNum={navCartNum}/>
-      <ProductContainerComponent addItemToCart={addItemToCart} deleteItemToCart={deleteItemToCart} counter={counter} addToCartButton={addToCartButton}/>
+      <NavContainerComponent counter={counter} navCart={navCart} navCartNum={navCartNum} toggleCartModal={toggleCartModal}/>
+      <ProductContainerComponent addItemToCart={addItemToCart} deleteItemToCart={deleteItemToCart} counter={counter} addToCartButton={addToCartButton} productPrice={productPrice} discount={discount} discountedPrice={discountedPrice} />
     </div>
   );
 }
