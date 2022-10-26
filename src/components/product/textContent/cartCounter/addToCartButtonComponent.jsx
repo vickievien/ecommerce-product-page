@@ -1,9 +1,9 @@
 const AddToCartButtonComponent = (props) => {
 
     return (
-        <a href="#" className="button add-to-cart">
+        <a href="#" className="button add-to-cart" onClick={props.addToCartButton}>
             <img src="/images/icon-cart-white.svg" alt="cart" className="cart-icon"/>
-            <p onClick={props.addToCartButton}>Add to cart</p>
+            <p>Add to cart</p>
         </a>
     )
 }
