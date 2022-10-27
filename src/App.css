@@ -383,17 +383,17 @@ li {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  
-}
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 800px) {
   .arrows-container {
     display: none;
   }
   .carousel-image {
     border-radius: 15px;
   }
+}
+
+@media only screen and (min-width: 1024px) {
+
 }
 
 /* CART MODAL */
