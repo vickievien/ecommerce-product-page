@@ -377,6 +377,11 @@ li {
   position: relative;
 }
 
+.carousel-thumbnail-container {
+  display: none;
+  position: relative;
+}
+
 @media only screen and (min-width: 500px) {
   .carousel-container {
     height: 500px;
@@ -387,13 +392,30 @@ li {
   .arrows-container {
     display: none;
   }
+  .carousel-container {
+    height: auto;
+  }
   .carousel-image {
     border-radius: 15px;
+  }
+  .carousel-thumbnail-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .carousel-thumbnail-container > img {
+    width: 75px;
+    height: 75px;
+    display: block;
+    border-radius: 10px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-
+  .carousel-thumbnail-container > img {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 /* CART MODAL */
