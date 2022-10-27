@@ -50,7 +50,7 @@ function App() {
       <NavContainerComponent counter={counter} navCart={navCart} navCartNum={navCartNum} toggleCartModal={toggleCartModal}/>
       <ProductContainerComponent addItemToCart={addItemToCart} deleteItemToCart={deleteItemToCart} counter={counter} addToCartButton={addToCartButton} productPrice={productPrice} discount={discount} discountedPrice={discountedPrice} />
       {cartModal ?
-      <CartModalComponent />
+      <CartModalComponent cartTotal={cartTotal} discountedPrice={discountedPrice} navCartNum={navCartNum}/>
       :
       ""}
     </div>

@@ -370,8 +370,7 @@ li {
   border-radius: 10px;
   box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
   width: 360px;
-  height: 256px;
-  padding: 24px;
+  padding: 24px 24px 32px 24px;
   background-color: #fff;
 }
 
@@ -416,6 +415,11 @@ li {
   margin: 24px 0;
 }
 
+.cart-total {
+  font-weight: 700;
+  color: var(--text-primary)
+}
+
 .icon-delete {
   align-self: center;
 }
@@ -423,6 +427,13 @@ li {
 .button-primary.checkout {
   font-weight: 700;
   box-shadow: none;
+}
+
+.cart-empty {
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 75px 0 65px 0;
 }
 
 @media only screen and (min-width: 500px) {
