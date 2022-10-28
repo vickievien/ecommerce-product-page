@@ -558,3 +558,34 @@ li {
     padding-right: 90px;
   }
 }
+
+/* LIGHTBOX */
+@media only screen and (min-width: 1024px) {
+  .lightbox-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: calc(100vh + 132px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-container.lightbox {
+    width: 550px;
+    height: 550px;
+  }
+
+  .lightbox > .arrows-container {
+    display: flex;
+  }
+  .lightbox > .arrows-container > .arrow-wrapper {
+    padding: 0;
+  }
+  .lightbox-close {
+    /* position: absolute; */
+    right: 0;
+  }
+}
