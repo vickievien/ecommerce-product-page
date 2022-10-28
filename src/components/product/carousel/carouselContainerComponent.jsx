@@ -2,12 +2,13 @@ import { useState } from "react";
 
 const CarouselContainerComponent = () => {
     const array = [1,2,3,4];
-    const images = array.map(x => `image-product-${x}.jpg`);
-    const imageSrcThumbnails = array.map(x => `image-product-${x}-thumbnail.jpg`);
+    const images = array.map(x => `./images/image-product-${x}.jpg`);
+    const [mainCarouselImage, setMainCarouselImage] = useState(`${images[0]}`);
+    const imageSrcThumbnails = array.map(x => `image-product-${x}`);
 
     let [index, setIndex] = useState(0);
 
-    const numOfImages = images.length - 1;
+    const numOfImages = imageSrcThumbnails.length - 1;
 
     const nextSlide = () => {
         setIndex(index === numOfImages ? 0 : index + 1)
@@ -17,13 +18,17 @@ const CarouselContainerComponent = () => {
         setIndex(index > 0 ? index - 1 : numOfImages)
     }
 
+    const changeThumbnail = (image) => {
+        setMainCarouselImage(`./images/${image}.jpg`);
+    }
+
     const imageThumbnails = imageSrcThumbnails.map (x => 
-        <img src={`./images/${x}`} alt="product-image" />
-        )
+        <img src={`./images/${x}-thumbnail.jpg`} alt="product-image" key={`thumbnail-${x}`} className="carousel-thumbnail-image" onClick={() => changeThumbnail(x)}/>
+    )
 
     return (
         <section className="carousel-container">
-            <img className="carousel-image" src={`./images/${images[index]}`} alt="image-product" />
+            <img className="carousel-image" src={mainCarouselImage} alt="image-product" />
             <div className="arrows-container">
                 <div className="arrow-wrapper" onClick={prevSlide}>
                     <img className="arrow" src="./images/icon-previous.svg" alt="previous arrow" />
