@@ -38,7 +38,7 @@ const CarouselContainerComponent = () => {
     }
 
     const imageThumbnails = imageSrcThumbnails.map (x => 
-        <img src={`./images/${x}-thumbnail.jpg`} alt="product-image" key={`thumbnail-${x}`} className="carousel-thumbnail-image" onClick={() => changeThumbnail(x)}/>
+        <img src={`./images/${x}-thumbnail.jpg`} alt="product-image" key={`thumbnail-${x}`} className={`carousel-thumbnail-image ${imageSrcThumbnails.indexOf(x) + 1 === imageNum ? 'focus' : ''}`} onClick={() => changeThumbnail(x)}/>
     )
 
     return (
