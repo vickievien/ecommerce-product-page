@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CarouselThumbnailComponent from "./carouselThumbnailComponent";
 
 const CarouselContainerComponent = () => {
     const array = [1,2,3,4];
@@ -37,9 +38,9 @@ const CarouselContainerComponent = () => {
         setImageNum(imageNumPosition);
     }
 
-    const imageThumbnails = imageSrcThumbnails.map (x => 
-        <img src={`./images/${x}-thumbnail.jpg`} alt="product-image" key={`thumbnail-${x}`} className={`carousel-thumbnail-image ${imageSrcThumbnails.indexOf(x) + 1 === imageNum ? 'focus' : ''}`} onClick={() => changeThumbnail(x)}/>
-    )
+    // const imageThumbnails = imageSrcThumbnails.map (x => 
+    //     <img src={`./images/${x}-thumbnail.jpg`} alt="product-image" key={`thumbnail-${x}`} className={`carousel-thumbnail-image ${imageSrcThumbnails.indexOf(x) + 1 === imageNum ? 'focus' : ''}`} onClick={() => changeThumbnail(x)}/>
+    // )
 
     return (
         <section className="carousel-container">
@@ -52,9 +53,7 @@ const CarouselContainerComponent = () => {
                     <img className="arrow" src="./images/icon-next.svg" alt="next arrow" />
                 </div>
             </div>
-            <div className="carousel-thumbnail-container">
-                {imageThumbnails}
-            </div>
+            <CarouselThumbnailComponent imageNum={imageNum} imageSrcThumbnails={imageSrcThumbnails} changeThumbnail={changeThumbnail}/>
         </section>
     )
 }
