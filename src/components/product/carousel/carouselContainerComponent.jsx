@@ -6,20 +6,35 @@ const CarouselContainerComponent = () => {
     const [mainCarouselImage, setMainCarouselImage] = useState(`${images[0]}`);
     const imageSrcThumbnails = array.map(x => `image-product-${x}`);
 
-    let [index, setIndex] = useState(0);
-
-    const numOfImages = imageSrcThumbnails.length - 1;
+    let [imageNum, setImageNum] = useState(1);
+    const numOfImages = imageSrcThumbnails.length;
 
     const nextSlide = () => {
-        setIndex(index === numOfImages ? 0 : index + 1)
+        let newImageNum = imageNum;
+        if(imageNum === numOfImages) {
+            newImageNum = 1;
+        } else {
+            newImageNum = imageNum + 1;
+        }
+        setImageNum(newImageNum);
+        setMainCarouselImage(`./images/image-product-${newImageNum}.jpg`);
     }
 
     const prevSlide = () => {
-        setIndex(index > 0 ? index - 1 : numOfImages)
+        let newImageNum = imageNum;
+        if(imageNum === 1) {
+            newImageNum = numOfImages;
+        } else {
+            newImageNum = imageNum - 1;
+        }
+        setImageNum(newImageNum);
+        setMainCarouselImage(`./images/image-product-${newImageNum}.jpg`);
     }
 
     const changeThumbnail = (image) => {
         setMainCarouselImage(`./images/${image}.jpg`);
+        let imageNumPosition = (imageSrcThumbnails.indexOf(image)) + 1;
+        setImageNum(imageNumPosition);
     }
 
     const imageThumbnails = imageSrcThumbnails.map (x => 
