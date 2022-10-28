@@ -38,10 +38,6 @@ const CarouselContainerComponent = () => {
         setImageNum(imageNumPosition);
     }
 
-    // const imageThumbnails = imageSrcThumbnails.map (x => 
-    //     <img src={`./images/${x}-thumbnail.jpg`} alt="product-image" key={`thumbnail-${x}`} className={`carousel-thumbnail-image ${imageSrcThumbnails.indexOf(x) + 1 === imageNum ? 'focus' : ''}`} onClick={() => changeThumbnail(x)}/>
-    // )
-
     return (
         <section className="carousel-container">
             <img className="carousel-image" src={mainCarouselImage} alt="image-product" />

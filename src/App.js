@@ -41,7 +41,6 @@ function App() {
 
   const toggleCartModal = () => {
     setCartModal(!cartModal);
-    console.log(cartTotal);
   }
 
 

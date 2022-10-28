@@ -8,7 +8,6 @@ const NavContainerComponent = (props) => {
     const [mobileNav, setMobileNav] = useState(false);
 
     const toggleMobileNav = () => {
-        console.log('clicking');
         setMobileNav(!mobileNav);
     }
 
