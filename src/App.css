@@ -412,11 +412,11 @@ li {
   position: relative;
 }
 
-.carousel-thumbnail-image:hover {
+.carousel-thumbnail-image-wrapper:hover {
  opacity: 50%; 
 }
 
-.carousel-thumbnail-image.focus {
+.carousel-thumbnail-image-wrapper.focus {
   border: 2px solid var(--color-primary); 
   opacity: 50%; 
 }
@@ -442,11 +442,17 @@ li {
     justify-content: space-between;
     margin-top: 30px;
   }
-  .carousel-thumbnail-container > img {
-    width: 75px;
-    height: 75px;
+  .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper {
+    width: 90px;
+    height: 90px;
     display: block;
     border-radius: 10px;
+    overflow: hidden;
+  }
+  .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper > img {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 }
 
@@ -577,7 +583,6 @@ li {
     width: 550px;
     height: 550px;
   }
-
   .lightbox > .arrows-container {
     display: flex;
   }
@@ -596,4 +601,36 @@ li {
   .lightbox-close:hover {
     fill: var(--color-primary);
   }
+  .lightbox > .carousel-thumbnail-container {
+    justify-content: space-around;
+  }
+  .lightbox > .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper:hover {
+    opacity: 100%;
+  }
+  .lightbox > .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper {
+    position: relative;
+  }
+  .lightbox > .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper:hover::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255, 0.75);
+  }
+  .lightbox > .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper.focus {
+    opacity: 100%;
+    position: relative;
+  }
+  .lightbox > .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper.focus::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255, 0.75);
+  }
 }
+
