@@ -584,8 +584,16 @@ li {
   .lightbox > .arrows-container > .arrow-wrapper {
     padding: 0;
   }
+  .lightbox-close-container {
+    width: 550px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
   .lightbox-close {
-    /* position: absolute; */
-    right: 0;
+    fill: white;
+  }
+  .lightbox-close:hover {
+    fill: var(--color-primary);
   }
 }
