@@ -394,6 +394,14 @@ li {
   position: relative;
 }
 
+.carousel-thumbnail-image:hover {
+ opacity: 50%; 
+}
+
+.carousel-thumbnail-image.focus {
+  border: 2px solid var(--color-primary); 
+}
+
 @media only screen and (min-width: 500px) {
   .carousel-container {
     height: 500px;
