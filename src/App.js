@@ -4,6 +4,7 @@ import NavContainerComponent from './components/navBar/navContainerComponent';
 import ProductContainerComponent from './components/product/productContainerComponent';
 import { useState } from 'react';
 import CartModalComponent from './components/cartModal/cartModalComponent';
+import LightBoxContainerComponent from './components/lightBox/lightboxContainerComponent';
 
 function App() {
   const [counter, setCounter] = useState(1);
@@ -14,6 +15,7 @@ function App() {
   const [discountedPrice, setDiscountedPrice] = useState(productPrice * discount);
   const [cartTotal, setCartTotal] = useState(0);
   const [cartModal, setCartModal] = useState(false);
+  const [lightbox, setLightBox] = useState(true);
 
   const addItemToCart = () => {
     let newCounter = counter + 1;
@@ -52,6 +54,9 @@ function App() {
       <CartModalComponent cartTotal={cartTotal} discountedPrice={discountedPrice} navCartNum={navCartNum}/>
       :
       ""}
+      {lightbox ? 
+      <LightBoxContainerComponent />
+      : ""}
     </div>
   );
 }
