@@ -160,7 +160,7 @@ li {
     border-bottom: 1px solid #E4E9F2;
   }
   .nav-left {
-    gap: 55px;
+    gap: 25px;
     align-items: center;
   }
   .nav-logo-link {
@@ -171,7 +171,7 @@ li {
   }
   .nav-main-list {
     display: flex;
-    gap: 32px;
+    gap: 20px;
     order: 2;
   }
   .main-nav-list-item-link {
@@ -201,6 +201,12 @@ li {
   nav {
     margin: 0 165px;
     padding: 45px 0;
+  }
+  .nav-left {
+    gap: 55px;
+  }
+  .nav-main-list {
+    gap: 32px;
   }
   .main-nav-list-item-link:hover::before{
     top: 75px;
