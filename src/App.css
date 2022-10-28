@@ -405,6 +405,7 @@ li {
 
 .arrow {
   position: relative;
+  stroke: var(--text-primary);
 }
 
 .carousel-thumbnail-container {
@@ -593,6 +594,12 @@ li {
   .lightbox > .arrows-container > .arrow-wrapper {
     padding: 0;
   }
+
+  .lightbox .arrow:hover {
+    position: relative;
+    stroke: var(--color-primary);
+  }
+  
   .lightbox-close-container {
     width: 550px;
     display: flex;
