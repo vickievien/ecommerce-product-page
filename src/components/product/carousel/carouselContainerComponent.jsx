@@ -1,11 +1,12 @@
 import { useState } from "react";
 import CarouselThumbnailComponent from "./carouselThumbnailComponent";
 
-const CarouselContainerComponent = () => {
+const CarouselContainerComponent = (props) => {
     const array = [1,2,3,4];
     const images = array.map(x => `./images/image-product-${x}.jpg`);
     const [mainCarouselImage, setMainCarouselImage] = useState(`${images[0]}`);
     const imageSrcThumbnails = array.map(x => `image-product-${x}`);
+    
 
     let [imageNum, setImageNum] = useState(1);
     const numOfImages = imageSrcThumbnails.length;
@@ -38,9 +39,10 @@ const CarouselContainerComponent = () => {
         setImageNum(imageNumPosition);
     }
 
+
     return (
-        <section className="carousel-container">
-            <img className="carousel-image" src={mainCarouselImage} alt="image-product" />
+        <section className={`carousel-container ${props.lightbox ? props.className : ""}`}>
+            <img className="carousel-image" src={mainCarouselImage} alt="image-product" onClick={props.toggleLightBox}/>
             <div className="arrows-container">
                 <div className="arrow-wrapper" onClick={prevSlide}>
                     <img className="arrow" src="./images/icon-previous.svg" alt="previous arrow" />
