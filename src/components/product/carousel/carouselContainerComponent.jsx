@@ -1,4 +1,7 @@
 import { useState } from "react";
+import ArrowNextComponent from "./arrowNextComponent";
+import ArrowPreviousComponent from "./arrowPreviousComponent";
+import ArrowLeftComponent from "./arrowPreviousComponent";
 import CarouselThumbnailComponent from "./carouselThumbnailComponent";
 
 const CarouselContainerComponent = (props) => {
@@ -45,10 +48,11 @@ const CarouselContainerComponent = (props) => {
             <img className="carousel-image" src={mainCarouselImage} alt="image-product" onClick={props.toggleLightBox}/>
             <div className="arrows-container">
                 <div className="arrow-wrapper" onClick={prevSlide}>
-                    <img className="arrow" src="./images/icon-previous.svg" alt="previous arrow" />
+                    {/* <img className="arrow" src="./images/icon-previous.svg" alt="previous arrow" /> */}
+                    <ArrowPreviousComponent />
                 </div>
                 <div className="arrow-wrapper" onClick={nextSlide}>
-                    <img className="arrow" src="./images/icon-next.svg" alt="next arrow" />
+                    <ArrowNextComponent />
                 </div>
             </div>
             <CarouselThumbnailComponent imageNum={imageNum} imageSrcThumbnails={imageSrcThumbnails} changeThumbnail={changeThumbnail}/>
