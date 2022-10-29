@@ -4,7 +4,7 @@ import CarouselContainerComponent from "./carousel/carouselContainerComponent";
 import TextContentContainerComponent from "./textContent/textContentContainer";
 
 const ProductContainerComponent = (props) => {
-    const [lightbox, setLightbox] = useState(true);
+    const [lightbox, setLightbox] = useState(false);
 
     const toggleLightBox = () => {
         setLightbox(!lightbox);
