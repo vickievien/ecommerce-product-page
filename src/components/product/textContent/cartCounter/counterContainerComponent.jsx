@@ -1,10 +1,13 @@
+import AddIconComponent from "./addIconComponent";
+import MinusIconComponent from "./minusIconComponent";
+
 const CounterContainerComponent = (props) => {
     
     return (
         <div className="counter-container">
-            <img src="/images/icon-minus.svg" alt="minus" className="counter-icon" onClick={props.deleteItemToCart}/>
+            <MinusIconComponent />
             <p className="counter">{props.counter}</p>
-            <img src="/images/icon-plus.svg" alt="plus" className="counter-icon"onClick= {props.addItemToCart}/>
+            <AddIconComponent />
         </div>
     )
 }
