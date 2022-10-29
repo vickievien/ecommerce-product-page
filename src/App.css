@@ -584,22 +584,30 @@ li {
     justify-content: center;
     align-items: center;
   }
-  .carousel-container.lightbox {
+  .lightbox.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox .carousel-image {
     width: 550px;
     height: 550px;
   }
   .lightbox > .arrows-container {
     display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 550px;
+    position: relative;
+    top: -300px;
   }
   .lightbox > .arrows-container > .arrow-wrapper {
     padding: 0;
   }
-
   .lightbox .arrow:hover {
     position: relative;
     stroke: var(--color-primary);
   }
-  
   .lightbox-close-container {
     width: 550px;
     display: flex;
@@ -613,7 +621,8 @@ li {
     fill: var(--color-primary);
   }
   .lightbox > .carousel-thumbnail-container {
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    gap: 30px;
   }
   .lightbox > .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper:hover {
     opacity: 100%;
