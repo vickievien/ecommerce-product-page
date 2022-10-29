@@ -412,6 +412,14 @@ li {
   stroke: var(--text-primary);
 }
 
+.arrow-previous {
+  left: -2px;
+}
+
+.arrow-next {
+  right: -2px;
+}
+
 .carousel-thumbnail-container {
   display: none;
   position: relative;
