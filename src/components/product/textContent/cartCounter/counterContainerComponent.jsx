@@ -5,9 +5,9 @@ const CounterContainerComponent = (props) => {
     
     return (
         <div className="counter-container">
-            <MinusIconComponent />
+            <MinusIconComponent deleteItemToCart={props.deleteItemToCart} />
             <p className="counter">{props.counter}</p>
-            <AddIconComponent />
+            <AddIconComponent addItemToCart={props.addItemToCart} />
         </div>
     )
 }
