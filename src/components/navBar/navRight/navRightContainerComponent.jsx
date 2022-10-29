@@ -1,3 +1,5 @@
+import CartIconComponent from "./cartIconComponent";
+
 const NavRightContainerComponent = (props) => {
 
     return (
@@ -10,7 +12,7 @@ const NavRightContainerComponent = (props) => {
                         </div>
                     : ""
                     }
-                    <img src="/images/icon-cart.svg" alt="cart" />
+                    <CartIconComponent />
                 </a>
             </li>
             <li>
