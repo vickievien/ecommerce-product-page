@@ -417,6 +417,10 @@ li {
   position: relative;
 }
 
+.carousel-thumbnail-image-wrapper {
+  transition: 0.3s ease-in-out;
+ }
+
 .carousel-thumbnail-image-wrapper:hover {
  opacity: 50%; 
 }
@@ -608,6 +612,9 @@ li {
   .lightbox > .arrows-container > .arrow-wrapper {
     padding: 0;
   }
+  .lightbox .arrow {
+    transition: 0.3s ease-in-out;
+  }
   .lightbox .arrow:hover {
     position: relative;
     stroke: var(--color-primary);
@@ -620,16 +627,17 @@ li {
   }
   .lightbox-close {
     fill: white;
+    transition: 0.3s ease-in-out;
   }
   .lightbox-close:hover {
     fill: var(--color-primary);
   }
   .lightbox > .carousel-thumbnail-container {
-    /* justify-content: space-around; */
     gap: 30px;
   }
   .lightbox > .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper:hover {
     opacity: 100%;
+
   }
   .lightbox > .carousel-thumbnail-container > .carousel-thumbnail-image-wrapper {
     position: relative;
