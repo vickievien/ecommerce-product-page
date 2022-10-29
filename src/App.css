@@ -89,6 +89,15 @@ li {
   position: relative;
 }
 
+.cart-icon {
+  fill: var(--text-secondary);
+  transition: 0.3s ease-in-out;
+}
+
+.cart-icon:hover {
+  fill: var(--text-primary);
+}
+
 .nav-cart-num {
   position: absolute;
   width: 20px;
@@ -112,6 +121,13 @@ li {
 .avatar-link {
   width: 24px;
   height: 24px;
+  border-radius: 50%;
+  border: none;
+}
+
+.avatar-link:hover {
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
 }
 
 .avatar-link img {
