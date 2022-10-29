@@ -25,6 +25,10 @@ function App() {
   const deleteItemToCart = () => {
     let newCounter = counter - 1;
     setCounter(newCounter);
+
+    if(newCounter < 1) {
+      setCounter(1);
+    }
   }
 
   const addToCartButton = () => {
