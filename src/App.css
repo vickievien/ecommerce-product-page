@@ -176,6 +176,11 @@ li {
   }
   .main-nav-list-item-link {
     position: relative;
+    color: var(--text-secondary);
+    transition: 0.3s ease-in-out;
+  }
+  .main-nav-list-item-link:hover {
+    color: var(--text-primary);
   }
   .main-nav-list-item-link:hover::before{
     content: "";
