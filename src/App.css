@@ -194,6 +194,7 @@ li {
     position: relative;
     color: var(--text-secondary);
     transition: 0.3s ease-in-out;
+    font-size: 15px;
   }
   .main-nav-list-item-link:hover {
     color: var(--text-primary);
@@ -221,7 +222,7 @@ li {
 @media only screen and (min-width: 1024px) {
   nav {
     margin: 0 165px;
-    padding: 45px 0;
+    padding: 30px 0 35px 0;
   }
   .nav-left {
     gap: 55px;
@@ -245,6 +246,7 @@ li {
   font-weight: bold;
   letter-spacing: 1.85px;
   margin-bottom: 16px;
+  font-size: 12px;
 }
 
 .product-title {
@@ -387,7 +389,18 @@ li {
   .counter-container,
   .button-primary {
     padding: 20px 15px;
+  }
+  .product-title {
+    font-size: 44px;
+    line-height: 48px;
   } 
+  .product-subtitle {
+    font-size: 13px;
+  }
+  .product-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 /* CAROUSEL */
