@@ -231,7 +231,7 @@ li {
     gap: 32px;
   }
   .main-nav-list-item-link:hover::before{
-    top: 75px;
+    top: 65px;
   }
 }
 
